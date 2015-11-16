@@ -28,9 +28,13 @@ public class MyGameMenu extends World
     {
         StartGame startgame = new StartGame();
         addObject(startgame, 223, 159);
-        Help help = new Help();
-        addObject(help, 235, 245);
-        help.setLocation(228, 238);
-        help.setLocation(223, 236);
+        Controls controls = new Controls();
+        addObject(controls, 235, 245);
+        controls.setLocation(228, 238);
+        controls.setLocation(223, 236);
+        startgame.setLocation(301, 143);
+        controls.setLocation(302, 215);
+        startgame.setLocation(300, 117);
+        controls.setLocation(300, 186);
     }
 }

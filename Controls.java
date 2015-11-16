@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Help extends Actor
+public class Controls extends Actor
 {
     GameMenuInvoker menuInvoker = new GameMenuInvoker();
     ICommand control = new ControlsCommand();
