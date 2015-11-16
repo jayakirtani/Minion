@@ -10,10 +10,10 @@ public class Ground extends Actor
      */
     public Ground()
     {
-        GreenfootImage road = new GreenfootImage("road.jpg");
-        GreenfootImage image = new GreenfootImage(1040, road.getHeight());
+        GreenfootImage road = new GreenfootImage("newBack.png");
+        GreenfootImage image = new GreenfootImage(3040, road.getHeight());
         int w=road.getWidth();
-        for(int offset=0; offset<1040; offset+=w) image.drawImage(road, offset, 0);
+        for(int offset=0; offset<3040; offset+=w) image.drawImage(road, offset, 0);
         setImage(image);
     }
 }
