@@ -16,6 +16,12 @@ public class Controls extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    public Controls()
+    {
+        GreenfootImage controls = new GreenfootImage("Controls.png");
+        setImage (controls);
+    }
+    
     public void act() 
     {
        

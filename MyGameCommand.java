@@ -11,7 +11,7 @@ public class MyGameCommand implements ICommand
 
     public void execute()
     {
-        Greenfoot.setWorld(new MyGameWorld());
+        Greenfoot.setWorld(new MyWorld());
     }
     
 }

@@ -15,6 +15,13 @@ public class StartGame extends Actor
      * Act - do whatever the StartGame wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    public StartGame ()
+    {
+        GreenfootImage start = new GreenfootImage("Start.png");
+        setImage (start);
+    }
+    
     public void act() 
     {
         // Add your action code here.
