@@ -13,7 +13,7 @@ public class MyWorld extends SWorld
     {    
         super(1000, 400, 1, 2000); // scroll world constructor call; last parameter is scroll width
         // in the following statement, the main actor is placed at (400, 342) in scroll area coordinates
-        addMainActor(new Wombat(), 400, 342, 250, 300); // the last two int parameters are centered window x and y ranges
+        addMainActor(new Minion(), 400, 342, 250, 300); // the last two int parameters are centered window x and y ranges
         GreenfootImage bg = new GreenfootImage("spooky.jpg");
         setScrollingBackground(bg); // set the scolling background image
         // add other scrollable objects using scroll area coordinates
@@ -22,6 +22,7 @@ public class MyWorld extends SWorld
         // use of the following also adds scrollable objects using scroll area coordinates
         addObject(new Box(), 680, 450, true); // the boolean determines scrollable state
         // use the following for non-scrollable objects using window coordinates (not scroll area coordinates)
+        addObject(new Box(), 920, 350);
         addObject(new Score(), 40, 390, false);
     }
 }

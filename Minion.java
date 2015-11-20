@@ -6,12 +6,13 @@ import greenfoot.*;
  * <li>Right arrow moves actor right (toward right scroll limit)</li>
  * <li>Up arrow makes the actor jump</li><l>
  */
-public class Wombat extends Actor
+public class Minion extends Actor
 {
     final int jSpeed = 20; // the initial 'jump' speed
     int ySpeed = 0, xSpeed = 0; // the initial vertical and horizontal speeds
     boolean aboutFace; // the direction (left or right) the actor is facing
     boolean onGround; // the state of the actor being set on an object or not
+    boolean _600=true;
     
     /** 
      * Checks for changes in direction and moves the main actor.
@@ -29,6 +30,7 @@ public class Wombat extends Actor
     private void move()
     {
         ySpeed++; // adds gravity
+        EnemyFactory E = new EnemyFactory();
         if (xSpeed != 0 && onGround) xSpeed+=aboutFace?0.5:-2; // add friction
         setLocation(getX()+xSpeed/10, getY()+ySpeed/2);
         // check for change in horizontal direction
@@ -64,6 +66,12 @@ public class Wombat extends Actor
         {
             setLocation(getX()+1, getY());
             xSpeed = 0;
+        }
+        
+        if(getX()>400 && _600)
+        {
+            _600=false;
+            getWorld().addObject(E.makeEnemy("EM"), 600, 335);
         }
     }
     
