@@ -78,7 +78,7 @@ public class Ghost extends Enemy
             {
                 if(getImage()==imageML)
                     setImage(imageL); 
-                else if(getImage()==imageML)
+                else if(getImage()==imageMR)
                     setImage(imageR); 
             }
               
@@ -87,18 +87,18 @@ public class Ghost extends Enemy
             if(mget0.getX()>getX())
             {
                  move(+2);
-                 if(getImage()==imageL)
-                    setImage(imageL); 
-                 else if(getImage()==imageML)
-                    setImage(imageML); 
+                 if(getImage()==imageMR)
+                    setImage(imageMR); 
+                 else 
+                    setImage(imageR); 
             }
             else
             {
                 move(-2);
-                if(getImage()==imageR)
-                    setImage(imageR); 
-                 else if(getImage()==imageMR)
-                    setImage(imageMR); 
+                if(getImage()==imageML)
+                    setImage(imageML); 
+                else 
+                    setImage(imageL); 
             }
             if(mget0.getY()>getY())
             {
