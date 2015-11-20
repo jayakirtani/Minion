@@ -34,6 +34,11 @@ public abstract class Enemy extends Actor
      */
     public void hit(int damage) 
     {
+        stability = stability - damage;
+        if(stability <= 0) 
+        {
+            getWorld().removeObject(this);
+        }
     }
     
     /**

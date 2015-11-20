@@ -10,6 +10,4 @@ comment3.params=
 comment3.target=void\ moveEnemy()
 comment4.params=
 comment4.target=void\ switchImage()
-comment5.params=damage
-comment5.target=void\ hit(int)
-numComments=6
+numComments=5

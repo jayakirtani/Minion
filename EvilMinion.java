@@ -113,20 +113,5 @@ public class EvilMinion extends Enemy
         {
             imageChangeDelayCount++;
         }
-    }
-    
-   
-    public void hit(int damage) 
-    {
-        stability = stability - damage;
-        if(stability <= 0) 
-        {
-            getWorld().removeObject(this);
-        }
-    }
-    
-    
-    
-    
-    
+    } 
 }
