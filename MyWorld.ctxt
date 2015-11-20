@@ -1,7 +1,5 @@
 #BlueJ class context
-comment0.target=MyWorld
-comment0.text=\r\n\ Class\ MyWorld\:\ sample\ world\ to\ show\ how\ to\ make\ use\ of\ my\ world\ super-class\ SWorld\r\n
-comment1.params=
-comment1.target=MyWorld()
-comment1.text=\r\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\r\n
-numComments=2
+comment0.params=
+comment0.target=MyWorld()
+comment0.text=\r\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\r\n
+numComments=1

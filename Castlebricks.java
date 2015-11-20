@@ -6,14 +6,24 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Castlebricks extends Actor
+public class Castlebricks extends Brick
 {
-    /**
-     * Act - do whatever the Castlebricks wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
+      public Castlebricks()
     {
-        // Add your action code here.
-    }    
+       
+    }
+    public void act()
+    {
+       act2();
+       action();
+    }
+    public void action()
+    {
+        if(getWorld() instanceof MyWorld && counter% 6 ==0)
+            {
+                setImage(bricks);
+                //System.out.println("here");
+                counter++;
+    }
+    }
 }

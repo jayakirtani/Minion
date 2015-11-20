@@ -6,14 +6,42 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Brick extends Actor
+public class Brick extends Actor implements Decorator
 {
+    public GreenfootImage bricks = new GreenfootImage("castlebrick.png");
+    public GreenfootImage nbrick = new GreenfootImage("brick.png");
+ 
+    private boolean changed = false; //This determines whether the brick has changed images or not
+    public static int counter = 0;
+    
     /**
-     * Act - do whatever the Brick wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Defines the image for the brick
      */
-    public void act() 
+    public Brick()
     {
-        // Add your action code here.
-    }    
+        
+    }
+    
+    public void act()
+    {
+        action();
+    }
+    
+    /**
+     * If the world is world four or five, the image will be changed to the bricks image.
+     */
+    public void action() 
+    {
+        act2();
+            
+        
+    
+}
+    public void act2(){
+        
+            setImage(nbrick);
+            //System.out.println(counter);
+            counter++;
+    }
+    
 }
