@@ -24,12 +24,12 @@ public class EvilMinion extends Enemy
      */
     public void act() 
     {
-        moveEvilMinion();
+        moveEnemy();
         switchImage();
     }  
 
     
-    public void moveEvilMinion()
+    public void moveEnemy()
     {
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
         {

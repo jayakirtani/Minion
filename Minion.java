@@ -72,6 +72,8 @@ public class Minion extends Actor
         {
             _600=false;
             getWorld().addObject(E.makeEnemy("EM"), 600, 335);
+            getWorld().addObject(E.makeEnemy("GM"), 600, 335);
+            getWorld().addObject(E.makeEnemy("GH"), 600, 280);
         }
     }
     

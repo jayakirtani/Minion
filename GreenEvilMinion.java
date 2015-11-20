@@ -10,8 +10,8 @@ public class GreenEvilMinion extends Enemy
 {
     public GreenEvilMinion()
     {
-        imageL = new GreenfootImage("evilminion2L.png");
-        imageR = new GreenfootImage("evilminion2R.png");
+        imageL = new GreenfootImage("EvilMinion2L.png");
+        imageR = new GreenfootImage("EvilMinion2R.png");
         setImage(imageL);
         stability = 1;
         imageChangeTime = 5;
@@ -22,109 +22,38 @@ public class GreenEvilMinion extends Enemy
      */
     public void act() 
     {
-        moveEvilMinion();
-        switchImage();
+        moveEnemy();
+        //switchImage();
     }  
 
     
-    public void moveEvilMinion()
+    public void moveEnemy()
     {
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Brick.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Block.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Block.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Box.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Box.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Minion.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Minion.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (hitEdge == false)
         {
-            move(1);
+            move(5);
             setImage(imageR);
         }
         else if (hitEdge == true)
         {
-            move(-1);
+            move(-5);
             setImage(imageL);
-        }
-        
+        } 
     }
-    
-   /* public void switchImage()
-        {
-        if(imageChangeDelayCount >= imageChangeTime)
-        {
-            if(getImage() == imageL)
-            {
-                setImage(imageML);
-                imageChangeDelayCount = 0;
-            }
-            else if(getImage() == imageML)
-            {
-                setImage(imageL);
-                imageChangeDelayCount = 0;
-            }
-            else if(getImage() == imageR)
-            {
-                setImage(imageMR);
-                imageChangeDelayCount = 0;
-            }
-            else
-            {
-                setImage(imageR);
-                imageChangeDelayCount = 0;
-            }
-        }
-        else
-        {
-            imageChangeDelayCount++;
-        }
-    }
-    */
-   
-    public void hit(int damage) 
-    {
-        stability = stability - damage;
-        if(stability <= 0) 
-        {
-            getWorld().removeObject(this);
-        }
-    }
-    
-    
-    
-    
-    
 }

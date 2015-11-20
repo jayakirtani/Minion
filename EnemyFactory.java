@@ -12,6 +12,14 @@ public class EnemyFactory
         {
             return new EvilMinion();
         }
+        else if(E.equals("GM"))
+        {
+            return new GreenEvilMinion();
+        }
+        else if(E.equals("GH"))
+        {
+            return new Ghost();
+        }
         else
         {
             return null;

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Ghost
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ EvilMinion\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Ghost()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Calls\ the\ necessary\ methods\ to\ move\ the\ ghoomba,\ animate\ it\ and\ decide\ whether\ or\ not\ it\ has\ been\ hit\r\n
+comment3.params=
+comment3.target=void\ moveEnemy()
+comment4.params=damage
+comment4.target=void\ hit(int)
+comment4.text=\ public\ void\ switchImage()\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(imageChangeDelayCount\ >\=\ imageChangeTime)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(getImage()\ \=\=\ imageL)\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage(imageML);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageChangeDelayCount\ \=\ 0;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ else\ if(getImage()\ \=\=\ imageML)\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage(imageL);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageChangeDelayCount\ \=\ 0;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ else\ if(getImage()\ \=\=\ imageR)\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage(imageMR);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageChangeDelayCount\ \=\ 0;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setImage(imageR);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ imageChangeDelayCount\ \=\ 0;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ imageChangeDelayCount++;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+numComments=5
