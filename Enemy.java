@@ -11,6 +11,8 @@ public abstract class Enemy extends Actor
     protected int stability; //stores how much health the ghoomba has
     protected GreenfootImage imageL;
     protected GreenfootImage imageR;
+    protected GreenfootImage imageML;
+    protected GreenfootImage imageMR;
     protected int imageChangeTime; //defines how long to wait before the image changes
     protected int imageChangeDelayCount; //ticks up to change the image
     protected boolean imminentDeath; //determines if the ghoomba is about to die

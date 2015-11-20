@@ -6,14 +6,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class EvilMinion extends Enemy
+public class GreenEvilMinion extends Enemy
 {
-    public EvilMinion()
+    public GreenEvilMinion()
     {
-        imageL = new GreenfootImage("evilminionL.png");
-        imageR = new GreenfootImage("evilminionR.png");
-        imageML = new GreenfootImage("evilminionML.png");
-        imageMR = new GreenfootImage("evilminionMR.png");
+        imageL = new GreenfootImage("evilminion2L.png");
+        imageR = new GreenfootImage("evilminion2R.png");
         setImage(imageL);
         stability = 1;
         imageChangeTime = 5;
@@ -84,7 +82,7 @@ public class EvilMinion extends Enemy
         
     }
     
-    public void switchImage()
+   /* public void switchImage()
         {
         if(imageChangeDelayCount >= imageChangeTime)
         {
@@ -114,7 +112,7 @@ public class EvilMinion extends Enemy
             imageChangeDelayCount++;
         }
     }
-    
+    */
    
     public void hit(int damage) 
     {
