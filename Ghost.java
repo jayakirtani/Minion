@@ -38,7 +38,9 @@ public class Ghost extends Enemy
     
     public void moveEnemy()
     {
-        if((getWorld().getObjects(Minion.class).get(0).getX()-300<getX()&&getWorld().getObjects(Minion.class).get(0).getX()+300>getX()))
+        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
+        
+        if((mget0.getX()-300<getX() && mget0.getX()+300>getX()))
         {
             if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
             {
@@ -82,7 +84,7 @@ public class Ghost extends Enemy
               
             
             
-            if(getWorld().getObjects(Minion.class).get(0).getX()>getX())
+            if(mget0.getX()>getX())
             {
                  move(+2);
                  if(getImage()==imageL)
@@ -98,7 +100,7 @@ public class Ghost extends Enemy
                  else if(getImage()==imageMR)
                     setImage(imageMR); 
             }
-            if(getWorld().getObjects(Minion.class).get(0).getY()>getY())
+            if(mget0.getY()>getY())
             {
                  setLocation(getX(), getY() + 2);
                  
