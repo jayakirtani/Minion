@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Score()
-comment0.text=\r\n\ Creates\ the\ object\ and\ its\ initial\ image.\r\n
+comment0.text=\n\ Creates\ the\ object\ and\ its\ initial\ image.\n
 comment1.params=
 comment1.target=void\ updateImage()
-comment1.text=\r\n\ Creates\ (or\ re-creates)\ the\ image\ of\ the\ object.\r\n
+comment1.text=\n\ Creates\ (or\ re-creates)\ the\ image\ of\ the\ object.\n
 comment2.params=addAmt
 comment2.target=void\ add(int)
-comment2.text=\r\n\ Adusts\ the\ score\ by\ <i>addAmt</i>.\r\n\r\n\ @param\ addAmt\:\ the\ change\ in\ the\ score\ (negatives\ decrease\ the\ score)\r\n
+comment2.text=\n\ Adusts\ the\ score\ by\ <i>addAmt</i>.\n\n\ @param\ addAmt\:\ the\ change\ in\ the\ score\ (negatives\ decrease\ the\ score)\n
 numComments=3

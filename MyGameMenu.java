@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class MyGameMenu extends World
 {
-    
+//     static GreenfootSound theme = new GreenfootSound("menutheme2.mp3");
     /**
      * Constructor for objects of class MyGameMenu.
      * 
@@ -17,6 +17,8 @@ public class MyGameMenu extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        GreenfootImage gamemenu = new GreenfootImage("GameMenu.png");
+        setBackground(gamemenu);
         prepare();
     }
 
@@ -36,5 +38,35 @@ public class MyGameMenu extends World
         controls.setLocation(302, 215);
         startgame.setLocation(300, 117);
         controls.setLocation(300, 186);
+        startgame.setLocation(282, 295);
+        controls.setLocation(300, 337);
     }
+//     
+//     public void act ()
+//     {
+//         if(theme.isPlaying() == false)
+//          {
+//              theme.playLoop();
+//          }
+//          
+//         if ( Greenfoot.mouseClicked(null))
+//         {
+//             theme.stop();
+//         }
+//         
+//     }
+// 
+//     
+//     public void started()
+//     {
+//          if(theme.isPlaying() == false)
+//          {
+//              theme.play();
+//          }
+//     }
+//     
+//     public void stopped()
+//     {
+//         theme.pause();
+//     }
 }
