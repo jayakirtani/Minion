@@ -20,6 +20,10 @@ public class EnemyFactory
         {
             return new Ghost();
         }
+        else if(E.equals("SO"))
+        {
+            return new Scarlet();
+        }
         else
         {
             return null;

@@ -1,12 +1,16 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
+comment0.target=Enemy
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemy\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ moveEnemy()
-comment2.params=damage
-comment2.target=void\ hit(int)
-comment2.text=\n\ When\ this\ method\ is\ called,\ the\ stability\ of\ the\ ghoomba\ will\ be\ reduced\ by\ the\ damage\ that\ the\ bullet\ imflicts.\n\ If\ the\ stability\ of\ the\ ghoomba\ is\ less\ than\ or\ equal\ to\ zero,\ the\ ghoomba\ wll\ be\ removed.\n
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ playsound()
 comment3.params=
-comment3.target=void\ switchImage()
-comment3.text=\n\ This\ will\ animate\ the\ ghoomba\ based\ on\ which\ image\ it\ has\ and\ whether\ or\ not\ the\ delay\ count\ has\ reached\ the\ change\ time.\n\ If\ the\ delay\ count\ has\ not\ reached\ the\ change\ time,\ the\ delay\ count\ will\ tick\ up.\n
-numComments=4
+comment3.target=void\ moveEnemy()
+comment4.params=damage
+comment4.target=void\ hit(int)
+comment4.text=\r\n\ When\ this\ method\ is\ called,\ the\ stability\ of\ the\ ghoomba\ will\ be\ reduced\ by\ the\ damage\ that\ the\ bullet\ imflicts.\r\n\ If\ the\ stability\ of\ the\ ghoomba\ is\ less\ than\ or\ equal\ to\ zero,\ the\ ghoomba\ wll\ be\ removed.\r\n
+comment5.params=
+comment5.target=void\ switchImage()
+comment5.text=\r\n\ This\ will\ animate\ the\ ghoomba\ based\ on\ which\ image\ it\ has\ and\ whether\ or\ not\ the\ delay\ count\ has\ reached\ the\ change\ time.\r\n\ If\ the\ delay\ count\ has\ not\ reached\ the\ change\ time,\ the\ delay\ count\ will\ tick\ up.\r\n
+numComments=6
