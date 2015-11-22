@@ -18,7 +18,7 @@ public class Scarlet extends Enemy
         imageML = new GreenfootImage("scarletoverkillML.png");
         imageMR = new GreenfootImage("scarletoverkillMR.png");
         setImage(imageL);
-        stability = 1;
+        stability = 2;
         imageChangeTime = 5;
         birthsound = new GreenfootSound("scarletbirth.mp3");
         deathsound = new GreenfootSound("squish.wav");
