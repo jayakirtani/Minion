@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GreenEvilMinion extends EvilMinion
+public class GreenEvilMinion extends Enemy
 {
     public GreenEvilMinion()
     {
@@ -15,7 +15,6 @@ public class GreenEvilMinion extends EvilMinion
         setImage(imageL);
         stability = 1;
         imageChangeTime = 5;
-        EnemySpeed = 5;
     }
     
     /**
@@ -23,8 +22,38 @@ public class GreenEvilMinion extends EvilMinion
      */
     public void act() 
     {
-        playsound();
         moveEnemy();
         //switchImage();
-    }       
+    }  
+
+    
+    public void moveEnemy()
+    {
+        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
+               hitEdge = true;
+        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Brick.class)!= null)
+               hitEdge = false;
+        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Block.class)!= null)
+               hitEdge = true;
+        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Block.class)!= null)
+               hitEdge = false;
+        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Box.class)!= null)
+               hitEdge = true;
+        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Box.class)!= null)
+               hitEdge = false;
+        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Minion.class)!= null)
+               hitEdge = true;
+        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Minion.class)!= null)
+               hitEdge = false;
+        if (hitEdge == false)
+        {
+            move(5);
+            setImage(imageR);
+        }
+        else if (hitEdge == true)
+        {
+            move(-5);
+            setImage(imageL);
+        } 
+    }
 }

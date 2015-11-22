@@ -17,28 +17,12 @@ public abstract class Enemy extends Actor
     protected int imageChangeDelayCount; //ticks up to change the image
     protected boolean imminentDeath; //determines if the ghoomba is about to die
     protected boolean hitEdge = false; //initialize value for hitEdge. Determines whether the ghoomba has hit the edge
-    protected GreenfootSound birthsound;
-    protected GreenfootSound deathsound;
-    protected int EnemySpeed;
     
      public void act() 
     {
         moveEnemy();
         switchImage();
     }  
-    
-    public void playsound()
-    {
-        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
-        if(this.getX()>(mget0.getX()-500) && this.getX()<(mget0.getX()+500))
-        {
-            birthsound.play();
-        }
-        //else
-        //{
-         //   birthsound.stop();
-        //}
-    }
     
     public void moveEnemy()
     {
@@ -53,7 +37,6 @@ public abstract class Enemy extends Actor
         stability = stability - damage;
         if(stability <= 0) 
         {
-            deathsound.play();
             getWorld().removeObject(this);
         }
     }

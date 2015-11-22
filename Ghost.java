@@ -17,8 +17,6 @@ public class Ghost extends Enemy
         setImage(imageL);
         stability = 1;
         imageChangeTime = 5;
-        birthsound = new GreenfootSound("ghostbirth.mp3");
-        deathsound = new GreenfootSound("ghostdeath.mp3");
     }
     
     /**
@@ -26,7 +24,6 @@ public class Ghost extends Enemy
      */
     public void act() 
     {
-        playsound();
         moveEnemy();
         //switchImage();
     }  
