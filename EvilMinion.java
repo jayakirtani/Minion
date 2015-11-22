@@ -17,6 +17,9 @@ public class EvilMinion extends Enemy
         setImage(imageL);
         stability = 1;
         imageChangeTime = 5;
+        birthsound = new GreenfootSound("evilminionbirth.mp3");
+        deathsound = new GreenfootSound("squish.wav");
+        EnemySpeed = 2;
     }
     
     /**
@@ -24,6 +27,7 @@ public class EvilMinion extends Enemy
      */
     public void act() 
     {
+        playsound();
         moveEnemy();
         switchImage();
     }  
@@ -32,55 +36,31 @@ public class EvilMinion extends Enemy
     public void moveEnemy()
     {
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Brick.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Block.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Block.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Box.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Box.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Minion.class)!= null)
-        {
-            move(-2);
-            hitEdge = true;
-        }
+               hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Minion.class)!= null)
-        {
-            move(2);
-            hitEdge = false;
-        }
+               hitEdge = false;
         if (hitEdge == false)
         {
-            move(1);
+            move(EnemySpeed);
             setImage(imageR);
         }
         else if (hitEdge == true)
         {
-            move(-1);
+            move(-EnemySpeed);
             setImage(imageL);
-        }
+        } 
         
     }
     
