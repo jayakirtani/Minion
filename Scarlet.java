@@ -57,7 +57,7 @@ public class Scarlet extends Enemy
                 move(EnemySpeed);
                 setImage(imageR);
             }
-        if(this.getX()>(mget0.getX()-300) && this.getX()<(mget0.getX()+300)&& this.getY()<(mget0.getY()+80))
+        if(this.getX()>(mget0.getX()-300) && this.getX()<(mget0.getX()+300)&& this.getY()<(mget0.getY()+90))
         {
                 attackongoing=true;
                 attackminion();
