@@ -26,5 +26,9 @@ public class GreenEvilMinion extends EvilMinion
         playsound();
         moveEnemy();
         //switchImage();
-    }       
+        checkHit();
+        
+    } 
+    
+       
 }

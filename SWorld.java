@@ -36,7 +36,7 @@ public class SWorld extends World
     Actor mainActor = null; // the actor that always stays visible
     private List<Actor>genActors=new ArrayList(); // lists all generic scrolling actor objects
     private GreenfootImage background = null;
-    
+    public boolean minionL = false; //determines whether mario is moving left or right
     /**
      * The constructor for a universal scroller.
      * Creates an unbounded world and sets the size of the scrollable area.
@@ -280,6 +280,11 @@ public class SWorld extends World
     public int getUnivX(int worldX)
     {
         return (scrollingWidth-getWidth())/2+worldX+scrolledX;
+    }
+    
+    public int getUnivTest(int worldX){
+    
+        return worldX+scrolledX;
     }
     
     /**

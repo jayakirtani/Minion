@@ -1,13 +1,22 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * A user-controlled actor that walks and jumps, and is pulled down by gravity.
- * <l><li>Left arrow moves actor left (toward left scroll limit)</li>
- * <li>Right arrow moves actor right (toward right scroll limit)</li>
- * <li>Up arrow makes the actor jump</li><l>
+ * Write a description of class MinionGun here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Minion extends AllMinionState
+public class MinionGun extends AllMinionState
 {
+    /**
+     * Act - do whatever the MinionGun wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    private int gunReloadTime; //this is the number that the reloadDelayCount must pass before the gun shoots
+    private int reloadDelayCount; //this number ticks up to time the gun
+    private int scrolled; //this int determines how far mario has moved in the x direction
+     public int bullets; //this number determines how many bullets you have
+     public int bulletCount = 1000;
     final int jSpeed = 25; // the initial 'jump' speed
     int ySpeed = 0, xSpeed = 0; // the initial vertical and horizontal speeds
     boolean aboutFace; // the direction (left or right) the actor is facing
@@ -21,39 +30,42 @@ public class Minion extends AllMinionState
     private GreenfootImage imageML;
     private GreenfootImage imageMR;
     private boolean mLeft; //this boolean shows whether or not mario is left
+   
     public MinionContext minion = MinionContext.getInstanceMinion();
     
-    public Minion(MinionContext minion){
+    public MinionGun(MinionContext minion){
      this.minion = minion;
     
     };
-   public Minion(){
-        imageL = new GreenfootImage("minionL.png");
-        imageR = new GreenfootImage("minionR.png");
-        imageML = new GreenfootImage("minionML.png");
-        imageMR = new GreenfootImage("minionMR.png");
+    
+    public MinionGun(){
+        imageL = new GreenfootImage("miniongunL.png");
+        imageR = new GreenfootImage("miniongunR.png");
+        imageML = new GreenfootImage("miniongunML.png");
+        imageMR = new GreenfootImage("miniongunMR.png");
         invincibilityTime = 50;
         invincibilityDelayCount = 0;
         imageTime = 8;
         imageDelayCount = 0;
+        gunReloadTime = 20;
+        reloadDelayCount = 0;
    }
-    
-    
-    /** 
-     * Checks for changes in direction and moves the main actor.
-     */
-    public void act()
+   
+    public void act() 
     {
         
         animateMario();
+        reloadDelayCount++;
         invincibilityDelayCount++;
         imageDelayCount++;
         moveVertically();
         moveHorizontally();
-
-
-    }
+    }    
     
+    /**
+     * Moves the actor with appropriate image.  Checks for obstacles and adjusts
+     * the position of the actor accordingly.
+     */
     public void moveHorizontally()
     {
         setLocation(getX()+xSpeed, getY());
@@ -114,6 +126,10 @@ public class Minion extends AllMinionState
         {
             jump();
         }
+        if(Greenfoot.isKeyDown("space")){
+        
+            shoot();
+        }
     }
     
     /**
@@ -153,9 +169,6 @@ public class Minion extends AllMinionState
         Actor ghost = getOneObjectAtOffset (0, getImage().getHeight()/2, Ghost.class);
         Actor evilminion = getOneObjectAtOffset (0, getImage().getHeight()/2, EvilMinion.class);
         Actor Scarlet = getOneObjectAtOffset (0, getImage().getHeight()/2, Scarlet.class);
-        //Actor magikoopa = getOneObjectAtOffset (0, getImage().getHeight()/2, MagiKoopa.class);
-        //Actor shell = getOneObjectAtOffset (0, getImage().getHeight()/2, Shell.class);
-        //Actor cannonball = getOneObjectAtOffset (0, getImage().getHeight()/2, Cannonball.class);
         if(ghost != null)
         {
             ySpeed = -20;
@@ -245,31 +258,44 @@ public class Minion extends AllMinionState
             setImage(imageR);
         }
     }
-    public void grow(int x , int y){
-         
-        SWorld world = (SWorld)getWorld();    
-        Actor futureMain = new MinionGun();
-        world.addObject(futureMain, x, y, false); 
-        world.mainActor = futureMain;
-        setLocation(x, y);
+    public void shoot()
+    {
+        SWorld sWorld = (SWorld)getWorld();
+        bullets = bulletCount;
+        scrolled = ((SWorld)getWorld()).getUnivTest(getX());
        
-        invincibilityDelayCount = 0;
-        world.removeObject(this);
-        minion.setState(minion.getMinionGun());
+        if(reloadDelayCount >= gunReloadTime && bullets > 0)
+        {
+             //shot.play();
+            ((SWorld)getWorld()).addObject(new FriendlyBullet(), scrolled, getY(), true);
+            reloadDelayCount = 0;
+            decreaseAmmo();
+        }
+        else if (bullets == 0)
+        {
+           // dryfire.play();
+        }
+    }
+    public void decreaseAmmo(){
+        bulletCount--;
     }
     
+    public void grow(int x , int y){
+    
+    
+    }
     
     public void shrink(int x , int y){
-        
+    
         SWorld world = (SWorld)getWorld();    
-        Actor futureMain = new MinionS();
+        Actor futureMain = new Minion();
         world.addObject(futureMain, x, y, false); 
         world.mainActor = futureMain;
         setLocation(x, y);
        
         invincibilityDelayCount = 0;
         world.removeObject(this);
-        minion.setState(minion.getMinionSmall());
+        minion.setState(minion.getMinion());
     
     }
 }

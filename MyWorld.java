@@ -9,15 +9,34 @@ public class MyWorld extends SWorld
     /**
      * Creates a scrolling world using a main actor, a background, some obstacles, and a non-scrolling score.
      */
+     public void resetStaticVariables(){
+    
+       
+       if(!(MinionContext.currentState instanceof MinionS))
+        MinionContext.currentState = new MinionS();
+    
+    }
     public MyWorld()
     {    
         super(1000, 400, 1, 6000); // scroll world constructor call; last parameter is scroll width
+        setStage();
+    }
+    
+    
+    public void setStage(){
+    
+        resetStaticVariables();
         // in the following statement, the main actor is placed at (400, 342) in scroll area coordinates
-        addMainActor(new Minion(), 400, 342, 250, 300); // the last two int parameters are centered window x and y ranges
+        addMainActor(new MinionS(), 400, 342, 250, 300); // the last two int parameters are centered window x and y ranges
         GreenfootImage bg = new GreenfootImage("WorldBg.png");
         setScrollingBackground(bg); // set the scolling background image
         // add other scrollable objects using scroll area coordinates
-               addObject(new Ground(), 100, 390);
+        
+        
+        
+        
+        
+        addObject(new Ground(), 100, 390);
         addObject(new Ground(), 300, 390);
         addObject(new Banana(), 182, 358);
         addObject(new Banana(), 332, 358);
@@ -185,5 +204,12 @@ public class MyWorld extends SWorld
 
        
         addObject(new Score(), 40, 390, false);
+    
+       EnemyFactory E = new EnemyFactory();
+       this.addObject(E.makeEnemy("EM"), 600, 335);
+       this.addObject(E.makeEnemy("GM"), 600, 335);
+       this.addObject(E.makeEnemy("GH"), 600, 280);
+       this.addObject(E.makeEnemy("SO"), 2000, 335);     
+    
     }
 }

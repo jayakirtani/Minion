@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=MinionContext
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MinionContext\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment10.params=
+comment10.target=AllMinionState\ getMinionSmall()
+comment11.params=
+comment11.target=AllMinionState\ getMinionGun()
+comment2.params=
+comment2.target=MinionContext()
+comment3.params=w
+comment3.target=MinionContext(greenfoot.World)
+comment4.params=
+comment4.target=MinionContext\ getInstanceMinion()
+comment5.params=w
+comment5.target=MinionContext\ getInstanceCurrentState(greenfoot.World)
+comment6.params=w
+comment6.target=void\ shrink(greenfoot.World)
+comment7.params=w
+comment7.target=void\ grow(greenfoot.World)
+comment8.params=state
+comment8.target=void\ setState(AllMinionState)
+comment9.params=
+comment9.target=AllMinionState\ getMinion()
+numComments=12

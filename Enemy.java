@@ -1,4 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Write a description of class Enemy here.
@@ -17,19 +19,37 @@ public abstract class Enemy extends Actor
     protected int imageChangeDelayCount; //ticks up to change the image
     protected boolean imminentDeath; //determines if the ghoomba is about to die
     protected boolean hitEdge = false; //initialize value for hitEdge. Determines whether the ghoomba has hit the edge
+    protected boolean hitMinion = false;
     protected GreenfootSound birthsound;
     protected GreenfootSound deathsound;
     protected int EnemySpeed;
+    protected MinionContext minion = MinionContext.getInstanceCurrentState(getWorld());
     
      public void act() 
     {
         moveEnemy();
         switchImage();
+        checkHit();
     }  
     
+       protected void checkHit()
+    {
+        AllMinionState g = (AllMinionState) getOneIntersectingObject(AllMinionState.class);
+ 
+        if(g != null)
+        { 
+           minion.shrink(getWorld());
+        }
+        
+     }
+    
+    public void getMinion(){
+         MinionS mget0 = (MinionS) getWorld().getObjects(MinionS.class).get(0);
+    }
     public void playsound()
     {
-        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
+        AllMinionState mget0 = (AllMinionState) getWorld().getObjects(AllMinionState.class).get(0);
+        
         if(this.getX()>(mget0.getX()-500) && this.getX()<(mget0.getX()+500))
         {
             birthsound.play();

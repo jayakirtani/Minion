@@ -30,10 +30,10 @@ public class EvilMinion extends Enemy
         playsound();
         moveEnemy();
         switchImage();
+        checkHit();
     }  
 
-    
-    public void moveEnemy()
+         public void moveEnemy()
     {
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
                hitEdge = true;
@@ -47,10 +47,14 @@ public class EvilMinion extends Enemy
                hitEdge = true;
         if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Box.class)!= null)
                hitEdge = false;
-        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Minion.class)!= null)
+        if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, AllMinionState.class)!= null){
                hitEdge = true;
-        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Minion.class)!= null)
+               hitMinion = true;
+            }
+        if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, AllMinionState.class)!= null){
                hitEdge = false;
+               hitMinion = true;
+            }
         if (hitEdge == false)
         {
             move(EnemySpeed);

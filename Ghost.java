@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ghost extends Enemy
 {
+    
     public Ghost()
     {
         imageL = new GreenfootImage("ghostL.png");
@@ -21,6 +22,10 @@ public class Ghost extends Enemy
         deathsound = new GreenfootSound("ghostdeath.mp3");
     }
     
+    
+    
+    
+    
     /**
      * Calls the necessary methods to move the ghoomba, animate it and decide whether or not it has been hit
      */
@@ -28,6 +33,7 @@ public class Ghost extends Enemy
     {
         playsound();
         moveEnemy();
+        checkHit();
         //switchImage();
     }  
 
@@ -41,7 +47,7 @@ public class Ghost extends Enemy
     
     public void moveEnemy()
     {
-        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
+        AllMinionState mget0 = (AllMinionState) getWorld().getObjects(AllMinionState.class).get(0);
         
         if((mget0.getX()-300<getX() && mget0.getX()+300>getX()))
         {
@@ -69,13 +75,15 @@ public class Ghost extends Enemy
             {
                 direction();
             }
-            else if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Minion.class)!= null)
+            else if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, AllMinionState.class)!= null)
             {
                 direction();
+                hitMinion = true;
             }
-            else if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Minion.class)!= null)
+            else if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, AllMinionState.class)!= null)
             {
                 direction();
+                hitMinion = true;
             }
             else 
             {
@@ -113,6 +121,9 @@ public class Ghost extends Enemy
                 setLocation(getX(), getY() - 2);
                 
             }
+            
+            
+            
         }
     }
     

@@ -1,13 +1,12 @@
 #BlueJ class context
-comment0.target=Minion
-comment0.text=\r\n\ A\ user-controlled\ actor\ that\ walks\ and\ jumps,\ and\ is\ pulled\ down\ by\ gravity.\r\n\ <l><li>Left\ arrow\ moves\ actor\ left\ (toward\ left\ scroll\ limit)</li>\r\n\ <li>Right\ arrow\ moves\ actor\ right\ (toward\ right\ scroll\ limit)</li>\r\n\ <li>Up\ arrow\ makes\ the\ actor\ jump</li><l>\r\n
+comment0.target=MinionS
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MinionS\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=minion
-comment1.target=Minion(MinionContext)
+comment1.target=MinionS(MinionContext)
 comment2.params=
-comment2.target=Minion()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ act()
-comment3.text=\ \r\n\ Checks\ for\ changes\ in\ direction\ and\ moves\ the\ main\ actor.\r\n
+comment3.target=MinionS()
 comment4.params=
 comment4.target=void\ moveHorizontally()
 comment5.params=

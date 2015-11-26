@@ -1,13 +1,17 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * A user-controlled actor that walks and jumps, and is pulled down by gravity.
- * <l><li>Left arrow moves actor left (toward left scroll limit)</li>
- * <li>Right arrow moves actor right (toward right scroll limit)</li>
- * <li>Up arrow makes the actor jump</li><l>
+ * Write a description of class MinionS here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Minion extends AllMinionState
+public class MinionS extends AllMinionState
 {
+    /**
+     * Act - do whatever the MinionS wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     final int jSpeed = 25; // the initial 'jump' speed
     int ySpeed = 0, xSpeed = 0; // the initial vertical and horizontal speeds
     boolean aboutFace; // the direction (left or right) the actor is facing
@@ -19,30 +23,18 @@ public class Minion extends AllMinionState
     private GreenfootImage imageL;
     private GreenfootImage imageR;
     private GreenfootImage imageML;
+    
     private GreenfootImage imageMR;
     private boolean mLeft; //this boolean shows whether or not mario is left
+    boolean _600=true;
     public MinionContext minion = MinionContext.getInstanceMinion();
     
-    public Minion(MinionContext minion){
+    public MinionS(MinionContext minion){
      this.minion = minion;
     
     };
-   public Minion(){
-        imageL = new GreenfootImage("minionL.png");
-        imageR = new GreenfootImage("minionR.png");
-        imageML = new GreenfootImage("minionML.png");
-        imageMR = new GreenfootImage("minionMR.png");
-        invincibilityTime = 50;
-        invincibilityDelayCount = 0;
-        imageTime = 8;
-        imageDelayCount = 0;
-   }
     
-    
-    /** 
-     * Checks for changes in direction and moves the main actor.
-     */
-    public void act()
+    public void act() 
     {
         
         animateMario();
@@ -50,11 +42,19 @@ public class Minion extends AllMinionState
         imageDelayCount++;
         moveVertically();
         moveHorizontally();
-
-
-    }
+    }    
     
-    public void moveHorizontally()
+    public MinionS(){
+        imageL = new GreenfootImage("minionSL.png");
+        imageR = new GreenfootImage("minionSR.png");
+        imageML = new GreenfootImage("minionSML.png");
+        imageMR = new GreenfootImage("minionSMR.png");
+        invincibilityTime = 50;
+        invincibilityDelayCount = 0;
+        imageTime = 20;
+        imageDelayCount = 0;
+   }
+   public void moveHorizontally()
     {
         setLocation(getX()+xSpeed, getY());
         while (getOneObjectAtOffset (getImage().getWidth()/2, 0, Block.class)!= null)
@@ -245,31 +245,29 @@ public class Minion extends AllMinionState
             setImage(imageR);
         }
     }
+    
     public void grow(int x , int y){
-         
-        SWorld world = (SWorld)getWorld();    
-        Actor futureMain = new MinionGun();
+   
+        SWorld world = (SWorld)getWorld();
+        Actor futureMain = new Minion();
         world.addObject(futureMain, x, y, false); 
         world.mainActor = futureMain;
         setLocation(x, y);
-       
         invincibilityDelayCount = 0;
         world.removeObject(this);
-        minion.setState(minion.getMinionGun());
+        minion.setState(minion.getMinion());
+    
     }
     
     
-    public void shrink(int x , int y){
-        
-        SWorld world = (SWorld)getWorld();    
-        Actor futureMain = new MinionS();
-        world.addObject(futureMain, x, y, false); 
-        world.mainActor = futureMain;
-        setLocation(x, y);
-       
-        invincibilityDelayCount = 0;
-        world.removeObject(this);
-        minion.setState(minion.getMinionSmall());
+    public void shrink(int x, int y){
     
+        SWorld world = (SWorld)getWorld();    
+        world.removeObject(this);
+       // world.get
+        minion.setState(minion.getMinionSmall());
+        world.removeObjects(world.getObjects(null));
+         Greenfoot.setWorld(new MyWorld());
+        //Greenfoot.setWorld( );
     }
 }
