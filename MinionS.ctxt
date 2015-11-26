@@ -9,10 +9,17 @@ comment3.params=
 comment3.target=void\ moveHorizontally()
 comment4.params=
 comment4.target=void\ moveVertically()
+<<<<<<< HEAD
+comment4.text=\r\n\ This\ method\ will\ move\ mario\ vertically\ and\ then\ check\ if\ he\ should\ be\ removed\ because\ he\ is\ out\ of\ the\ world.\r\n\ It\ will\ also\ check\ if\ mario\ should\ kill\ an\ enemy\ which\ he\ is\ standing\ on.\r\n\ If\ the\ s\ key\ is\ pressed\ and\ there\ is\ a\ pipe\ below\ mario,\ the\ world\ will\ change.\r\n
+comment5.params=
+comment5.target=void\ jump()
+comment5.text=\r\n\ Moves\ the\ actor\ with\ appropriate\ image.\ \ Checks\ for\ obstacles\ and\ adjusts\r\n\ the\ position\ of\ the\ actor\ accordingly.\r\n
+=======
 comment4.text=\n\ This\ method\ will\ move\ mario\ vertically\ and\ then\ check\ if\ he\ should\ be\ removed\ because\ he\ is\ out\ of\ the\ world.\n\ It\ will\ also\ check\ if\ mario\ should\ kill\ an\ enemy\ which\ he\ is\ standing\ on.\n\ If\ the\ s\ key\ is\ pressed\ and\ there\ is\ a\ pipe\ below\ mario,\ the\ world\ will\ change.\n
 comment5.params=
 comment5.target=void\ jump()
 comment5.text=\n\ Moves\ the\ actor\ with\ appropriate\ image.\ \ Checks\ for\ obstacles\ and\ adjusts\n\ the\ position\ of\ the\ actor\ accordingly.\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 comment6.params=
 comment6.target=void\ animateMario()
 comment7.params=x\ y

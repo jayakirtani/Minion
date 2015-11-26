@@ -1,7 +1,11 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ resetStaticVariables()
+<<<<<<< HEAD
+comment0.text=\r\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\r\n
+=======
 comment0.text=\n\ Creates\ a\ scrolling\ world\ using\ a\ main\ actor,\ a\ background,\ some\ obstacles,\ and\ a\ non-scrolling\ score.\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 comment1.params=
 comment1.target=MyWorld()
 comment2.params=

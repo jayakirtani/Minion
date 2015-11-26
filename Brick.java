@@ -8,7 +8,7 @@ import greenfoot.*;
  */
 public class Brick extends Actor implements Decorator
 {
-    public GreenfootImage bricks = new GreenfootImage("castlebrick.png");
+    public GreenfootImage bricks = new GreenfootImage("cb.png");
     public GreenfootImage nbrick = new GreenfootImage("brick.png");
  
     private boolean changed = false; //This determines whether the brick has changed images or not

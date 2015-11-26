@@ -1,6 +1,18 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
+<<<<<<< HEAD
+comment0.text=\r\n\ This\ will\ call\ the\ methods\ that\ move\ and\ remove\ the\ bullet,\ as\ well\ as\ set\ the\ direction\ for\ the\ bullet\ once.\r\n
+comment1.params=
+comment1.target=void\ setDirection()
+comment1.text=\r\n\ This\ will\ set\ the\ direction\ for\ the\ bullet\ based\ on\ mario's\ direction\ when\ the\ bullet\ was\ shot\r\n
+comment2.params=
+comment2.target=void\ moveBullet()
+comment2.text=\r\n\ This\ will\ move\ the\ Bullet\ based\ on\ the\ original\ direction\ that\ marioG\ was\ facing\r\n
+comment3.params=
+comment3.target=void\ checkCollision()
+comment3.text=\r\n\ When\ called,\ this\ will\ check\ if\ the\ bullet\ is\ colliding\ with\ any\ enemies\ or\ terrain\ objects.\r\n\ If\ the\ bullet\ hits\ an\ enemy,\ it\ will\ damage\ the\ enemy\ and\ remove\ the\ bullet.\r\n\ If\ the\ bullet\ hits\ a\ terrain\ object,\ it\ will\ remove\ the\ bullet.\r\n
+=======
 comment0.text=\n\ This\ will\ call\ the\ methods\ that\ move\ and\ remove\ the\ bullet,\ as\ well\ as\ set\ the\ direction\ for\ the\ bullet\ once.\n
 comment1.params=
 comment1.target=void\ setDirection()
@@ -11,4 +23,5 @@ comment2.text=\n\ This\ will\ move\ the\ Bullet\ based\ on\ the\ original\ direc
 comment3.params=
 comment3.target=void\ checkCollision()
 comment3.text=\n\ When\ called,\ this\ will\ check\ if\ the\ bullet\ is\ colliding\ with\ any\ enemies\ or\ terrain\ objects.\n\ If\ the\ bullet\ hits\ an\ enemy,\ it\ will\ damage\ the\ enemy\ and\ remove\ the\ bullet.\n\ If\ the\ bullet\ hits\ a\ terrain\ object,\ it\ will\ remove\ the\ bullet.\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 numComments=4

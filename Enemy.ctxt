@@ -11,10 +11,17 @@ comment4.params=
 comment4.target=void\ moveEnemy()
 comment5.params=damage
 comment5.target=void\ hit(int)
+<<<<<<< HEAD
+comment5.text=\r\n\ When\ this\ method\ is\ called,\ the\ stability\ of\ the\ ghoomba\ will\ be\ reduced\ by\ the\ damage\ that\ the\ bullet\ imflicts.\r\n\ If\ the\ stability\ of\ the\ ghoomba\ is\ less\ than\ or\ equal\ to\ zero,\ the\ ghoomba\ wll\ be\ removed.\r\n
+comment6.params=
+comment6.target=void\ switchImage()
+comment6.text=\r\n\ This\ will\ animate\ the\ ghoomba\ based\ on\ which\ image\ it\ has\ and\ whether\ or\ not\ the\ delay\ count\ has\ reached\ the\ change\ time.\r\n\ If\ the\ delay\ count\ has\ not\ reached\ the\ change\ time,\ the\ delay\ count\ will\ tick\ up.\r\n
+=======
 comment5.text=\n\ When\ this\ method\ is\ called,\ the\ stability\ of\ the\ ghoomba\ will\ be\ reduced\ by\ the\ damage\ that\ the\ bullet\ imflicts.\n\ If\ the\ stability\ of\ the\ ghoomba\ is\ less\ than\ or\ equal\ to\ zero,\ the\ ghoomba\ wll\ be\ removed.\n
 comment6.params=
 comment6.target=void\ switchImage()
 comment6.text=\n\ This\ will\ animate\ the\ ghoomba\ based\ on\ which\ image\ it\ has\ and\ whether\ or\ not\ the\ delay\ count\ has\ reached\ the\ change\ time.\n\ If\ the\ delay\ count\ has\ not\ reached\ the\ change\ time,\ the\ delay\ count\ will\ tick\ up.\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 comment7.params=
 comment7.target=void\ deathAnimation()
 numComments=8

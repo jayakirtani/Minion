@@ -19,7 +19,7 @@ public class Castlebricks extends Brick
     }
     public void action()
     {
-        if(getWorld() instanceof MyWorld && counter% 6 ==0)
+        if(getWorld() instanceof MyWorld && counter% 5 ==0)
             {
                 setImage(bricks);
                 //System.out.println("here");

@@ -13,11 +13,24 @@ comment11.target=void\ scrollObjects()
 comment11.text=\n\ Scrolls\ all\ scrollable\ object.\ \ Determines\ how\ far\ outside\ boundary\ limits\ the\ main\ actor\ is,\ and\ moves\ all\ neccessary\n\ objects\ in\ the\ same\ direction,\ moving\ the\ main\ actor\ back\ within\ boundary\ limits.\ \ A\ background\ can\ be\n\ made\ up\ of\ scrollable\ actor\ object(s)\ to\ produce\ a\ scrolling\ background;\ however,\ determining\ intersectors\ with\ object\n\ will\ have\ to\ include\ the\ background\ object\ as\ being\ one\ or\ more\ of\ them\ when\ using\ <i>null</i>\ for\ the\ class\ of\ intersector.\n
 comment12.params=worldX
 comment12.target=int\ getUnivX(int)
+<<<<<<< HEAD
+comment12.text=\r\n\ Returns\ the\ horizonal\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\ of\ the\ 'x'\ value\ given,\r\n\ where\ 'x'\ is\ the\ horizontal\ offset\ from\ the\ top-left\ corner\ of\ the\ view\ window.\r\n\r\n\ @param\ worldX\ a\ horizontal\ offset\ from\ the\ top-left\ corner\ of\ the\ visible\ world\r\n\ @return\ the\ absolute\ horizontal\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\r\n
+=======
 comment12.text=\n\ Returns\ the\ horizonal\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\ of\ the\ 'x'\ value\ given,\n\ where\ 'x'\ is\ the\ horizontal\ offset\ from\ the\ top-left\ corner\ of\ the\ view\ window.\n\n\ @param\ worldX\ a\ horizontal\ offset\ from\ the\ top-left\ corner\ of\ the\ visible\ world\n\ @return\ the\ absolute\ horizontal\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 comment13.params=worldX
 comment13.target=int\ getUnivTest(int)
 comment14.params=worldY
 comment14.target=int\ getUnivY(int)
+<<<<<<< HEAD
+comment14.text=\r\n\ Returns\ the\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\ of\ the\ 'y'\ value\ given,\r\n\ where\ 'y'\ is\ the\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ view\ window.\r\n\r\n\ @param\ worldX\ a\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ visible\ world\r\n\ @return\ the\ absolute\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\r\n
+comment15.params=
+comment15.target=int\ getScrollingWidth()
+comment15.text=\r\n\ Returns\ the\ width\ of\ the\ scrolling\ area\ of\ the\ universe\r\n\r\n\ @return\ the\ width\ of\ the\ visible\ scrolling\ area\r\n
+comment16.params=
+comment16.target=int\ getScrollingHeight()
+comment16.text=\r\n\ Returns\ the\ height\ of\ the\ scrolling\ area\ of\ the\ universe\r\n\r\n\ @return\ the\ height\ of\ the\ visible\ scrolling\ area\r\n
+=======
 comment14.text=\n\ Returns\ the\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\ of\ the\ 'y'\ value\ given,\n\ where\ 'y'\ is\ the\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ view\ window.\n\n\ @param\ worldX\ a\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ visible\ world\n\ @return\ the\ absolute\ vertical\ offset\ from\ the\ top-left\ corner\ of\ the\ scrolling\ world\n
 comment15.params=
 comment15.target=int\ getScrollingWidth()
@@ -25,6 +38,7 @@ comment15.text=\n\ Returns\ the\ width\ of\ the\ scrolling\ area\ of\ the\ unive
 comment16.params=
 comment16.target=int\ getScrollingHeight()
 comment16.text=\n\ Returns\ the\ height\ of\ the\ scrolling\ area\ of\ the\ universe\n\n\ @return\ the\ height\ of\ the\ visible\ scrolling\ area\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 comment2.params=main\ xLoc\ yLoc\ xRange\ yRange
 comment2.target=void\ addMainActor(greenfoot.Actor,\ int,\ int,\ int,\ int)
 comment2.text=\n\ Adds\ the\ main\ actor\ into\ the\ world\ at\ the\ center\ of\ the\ window.<br><br>\n\ NOTE\:\ this\ method\ must\ be\ called\ prior\ to\ calling\ <i>setScrollingBackground</i>.\n\ Sets\ the\ range\ in\ movement\ within\ the\ window\ for\ the\ actor,\ and\ determines\ the\ range\ of\ horizontal\n\ and\ vertical\ scrollable\ movement\ allowable\ for\ the\ actor.<br><br>\n\n\ @param\ main\ the\ actor\ that\ is\ to\ always\ stay\ in\ view\n\ @param\ xLoc\ the\ x-coordinate\ of\ the\ scrolling\ area\ to\ place\ the\ main\ actor\n\ @param\ yLoc\ the\ y-coordinate\ of\ the\ scrolling\ area\ to\ place\ the\ main\ actor\n\ @param\ xRange\ the\ horizontal\ range\ of\ movement\ within\ the\ window\n\ @param\ yRange\ the\ vertical\ range\ of\ movement\ within\ the\ window\n
@@ -48,5 +62,9 @@ comment8.target=void\ removeObjects(java.util.List)
 comment8.text=\n\ Removes\ a\ collection\ of\ objects\ from\ the\ world,\ calling\ <i>removeObject(Actor)</i>\ for\ each\ one\ in\ the\ list\n\n\ @param\ objs\ the\ collection\ or\ list\ of\ objects\ to\ be\ removed\ from\ the\ world\n
 comment9.params=
 comment9.target=void\ act()
+<<<<<<< HEAD
+comment9.text=\r\n\ Runs\ the\ scrolling.\r\n
+=======
 comment9.text=\n\ Runs\ the\ scrolling.\n
+>>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 numComments=17
