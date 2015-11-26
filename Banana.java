@@ -30,14 +30,14 @@ public class Banana extends Actor
         }
         if(m != null)
         {
-            System.out.println(" Second control in banana : minion becomes MinionGun" );
+            //System.out.println(" Second control in banana : minion becomes MinionGun" );
           //  minion.setState(new Minion());
             minion.grow(getWorld());
             getWorld().removeObject(this);
         }
         if(s != null)
         {
-            System.out.println(" first control in banana : minionSmall becomes Minion");
+            //System.out.println(" first control in banana : minionSmall becomes Minion");
             minion.grow(getWorld());
             getWorld().removeObject(this);
         }

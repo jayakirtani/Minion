@@ -12,6 +12,7 @@ public class GreenEvilMinion extends EvilMinion
     {
         imageL = new GreenfootImage("EvilMinion2L.png");
         imageR = new GreenfootImage("EvilMinion2R.png");
+        imageDeath = new GreenfootImage("evilminionDeath2.png");
         setImage(imageL);
         stability = 1;
         imageChangeTime = 5;
@@ -23,10 +24,17 @@ public class GreenEvilMinion extends EvilMinion
      */
     public void act() 
     {
-        playsound();
-        moveEnemy();
-        //switchImage();
-        checkHit();
+        if(!isDead)
+        {
+            playsound();
+            moveEnemy();
+            //switchImage();
+            checkHit();
+        }
+        else
+        {
+            deathAnimation();
+        }
         
     } 
     

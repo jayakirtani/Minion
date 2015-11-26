@@ -20,20 +20,24 @@ public class Ghost extends Enemy
         imageChangeTime = 5;
         birthsound = new GreenfootSound("ghostbirth.mp3");
         deathsound = new GreenfootSound("ghostdeath.mp3");
+        imageDeath = new GreenfootImage("ghostDeath.png");
     }
-    
-    
-    
-    
     
     /**
      * Calls the necessary methods to move the ghoomba, animate it and decide whether or not it has been hit
      */
     public void act() 
     {
-        playsound();
-        moveEnemy();
-        checkHit();
+        if(!isDead)
+        {
+            playsound();
+            moveEnemy();
+            checkHit();
+        }
+        else
+        {
+            deathAnimation();
+        }
         //switchImage();
     }  
 
@@ -121,13 +125,22 @@ public class Ghost extends Enemy
                 setLocation(getX(), getY() - 2);
                 
             }
-            
-            
-            
         }
     }
     
-       
+    public void playsound()
+    {
+        AllMinionState mget0 = (AllMinionState) getWorld().getObjects(AllMinionState.class).get(0);
+        
+        if((this.getX()>(mget0.getX()-900)&&this.getX()<(mget0.getX()-300)) || (this.getX()<(mget0.getX()+900)&&this.getX()>(mget0.getX()+300)))
+        {
+            deathsound.play();
+        }
+        else if((this.getX()>(mget0.getX()-300)) &&  (this.getX()<(mget0.getX()+300)))
+        {
+            birthsound.play();
+        }
+    }
     
    /* public void switchImage()
         {

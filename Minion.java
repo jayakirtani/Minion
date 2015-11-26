@@ -150,23 +150,12 @@ public class Minion extends AllMinionState
             ySpeed = 0;
         }
         
-        Actor ghost = getOneObjectAtOffset (0, getImage().getHeight()/2, Ghost.class);
-        Actor evilminion = getOneObjectAtOffset (0, getImage().getHeight()/2, EvilMinion.class);
-        Actor Scarlet = getOneObjectAtOffset (0, getImage().getHeight()/2, Scarlet.class);
-        //Actor magikoopa = getOneObjectAtOffset (0, getImage().getHeight()/2, MagiKoopa.class);
-        //Actor shell = getOneObjectAtOffset (0, getImage().getHeight()/2, Shell.class);
-        //Actor cannonball = getOneObjectAtOffset (0, getImage().getHeight()/2, Cannonball.class);
-        if(ghost != null)
+        Enemy g = (Enemy) getOneIntersectingObject(Enemy.class);
+        if(g != null)
         {
             ySpeed = -20;
             //squish.play();
-            getWorld().removeObject(ghost);
-        }
-        if(evilminion != null)
-        {
-            ySpeed = -20;
-            //squish.play();
-            getWorld().removeObject(evilminion);
+            g.hit(1);
         }
         
     }

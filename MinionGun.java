@@ -166,22 +166,28 @@ public class MinionGun extends AllMinionState
             ySpeed = 0;
         }
         
-        Actor ghost = getOneObjectAtOffset (0, getImage().getHeight()/2, Ghost.class);
+        Enemy g = (Enemy) getOneIntersectingObject(Enemy.class);
+        //Actor ghost = getOneObjectAtOffset (0, getImage().getHeight()/2, Ghost.class);
         Actor evilminion = getOneObjectAtOffset (0, getImage().getHeight()/2, EvilMinion.class);
         Actor Scarlet = getOneObjectAtOffset (0, getImage().getHeight()/2, Scarlet.class);
-        if(ghost != null)
+        //if(ghost != null)
+        //{
+         //   ySpeed = -20;
+            //squish.play();
+          //  getWorld().removeObject(ghost);
+        //}
+        //if(evilminion != null)
+        //{
+        //    ySpeed = -20;
+        //    //squish.play();
+        //    getWorld().removeObject(evilminion);
+        //}
+        if(g != null)
         {
             ySpeed = -20;
             //squish.play();
-            getWorld().removeObject(ghost);
+            g.hit(1);
         }
-        if(evilminion != null)
-        {
-            ySpeed = -20;
-            //squish.play();
-            getWorld().removeObject(evilminion);
-        }
-        
     }
     
     /**
@@ -192,8 +198,7 @@ public class MinionGun extends AllMinionState
     {
         if (onGround == true)
         {
-            //jump.play();
-            ySpeed -= jSpeed;
+              ySpeed -= jSpeed;
         }
     }
     

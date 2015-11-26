@@ -32,10 +32,6 @@ public class MyWorld extends SWorld
         setScrollingBackground(bg); // set the scolling background image
         // add other scrollable objects using scroll area coordinates
         
-        
-        
-        
-        
         addObject(new Ground(), 100, 390);
         addObject(new Ground(), 300, 390);
         addObject(new Banana(), 182, 358);
@@ -189,6 +185,7 @@ public class MyWorld extends SWorld
 
        addObject(new Ground(), 5000, 390);
        addObject(new Ground(), 5315, 390);
+       
 
        addObject(new Castlebricks(), 4865, 358);
        addObject(new Castlebricks(), 4865, 326);
@@ -201,15 +198,15 @@ public class MyWorld extends SWorld
        addObject(new Castlebricks(), 5450, 358);
        addObject(new Castlebricks(), 5450, 326);
        addObject(new Banana(), 5450, 298);
-
+              
+       addObject(new Score(), 40, 390, false);
        
-        addObject(new Score(), 40, 390, false);
-    
        EnemyFactory E = new EnemyFactory();
        this.addObject(E.makeEnemy("EM"), 600, 335);
        this.addObject(E.makeEnemy("GM"), 600, 335);
-       this.addObject(E.makeEnemy("GH"), 600, 280);
-       this.addObject(E.makeEnemy("SO"), 2000, 335);     
+       this.addObject(E.makeEnemy("GH"), 1500, 280);
+       this.addObject(E.makeEnemy("SO"), 5200, 335);     
     
+       
     }
 }

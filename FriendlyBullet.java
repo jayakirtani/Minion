@@ -65,13 +65,11 @@ public class FriendlyBullet extends Actor
        
         Brick br = (Brick) getOneIntersectingObject(Brick.class);
         Enemy g = (Enemy) getOneIntersectingObject(Enemy.class);
-        EvilMinion em = (EvilMinion) getOneIntersectingObject(EvilMinion.class);
-        GreenEvilMinion gm = (GreenEvilMinion) getOneIntersectingObject(GreenEvilMinion.class);
         Block bl = (Block) getOneIntersectingObject(Block.class);
        
         if(g != null)
         {
-            g.hit(damage);
+            g.hit(1);
             imminentDeath = true;
         }
         

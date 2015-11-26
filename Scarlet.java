@@ -17,6 +17,7 @@ public class Scarlet extends Enemy
         imageR = new GreenfootImage("scarletoverkillR.png");
         imageML = new GreenfootImage("scarletoverkillML.png");
         imageMR = new GreenfootImage("scarletoverkillMR.png");
+        imageDeath = new GreenfootImage("scarletoverkillDeath.png");
         setImage(imageL);
         stability = 20;
         imageChangeTime = 5;
@@ -27,9 +28,15 @@ public class Scarlet extends Enemy
     }
     public void act() 
     {
-        playsound();
-        moveEnemy();
-        
+        if(!isDead)
+        {
+            playsound();
+            moveEnemy();
+        }  
+        else
+        {
+            deathAnimation();
+        }
     }    
     
     public void moveEnemy()
@@ -76,7 +83,6 @@ public class Scarlet extends Enemy
             
         if( hitMinion == true){
                 minion.shrink(getWorld());
-                hit(1);
             }
     }
     public void playsound()
