@@ -18,7 +18,7 @@ public class Scarlet extends Enemy
         imageML = new GreenfootImage("scarletoverkillML.png");
         imageMR = new GreenfootImage("scarletoverkillMR.png");
         setImage(imageL);
-        stability = 2;
+        stability = 20;
         imageChangeTime = 5;
         birthsound = new GreenfootSound("scarletbirth.mp3");
         deathsound = new GreenfootSound("squish.wav");
@@ -29,11 +29,12 @@ public class Scarlet extends Enemy
     {
         playsound();
         moveEnemy();
+        
     }    
     
     public void moveEnemy()
     {
-        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
+        AllMinionState mget0 = (AllMinionState) getWorld().getObjects(AllMinionState.class).get(0);
         if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, Brick.class)!= null)
                hitEdge = true;
         else if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Brick.class)!= null)
@@ -46,6 +47,14 @@ public class Scarlet extends Enemy
                hitEdge = true;
         else if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, Box.class)!= null)
                hitEdge = false;
+        else if (getOneObjectAtOffset (getImage().getWidth()/2+1, 0, AllMinionState.class)!= null)
+            {
+                hitMinion = true;
+            }
+            else if (getOneObjectAtOffset (-getImage().getWidth()/2-1, 0, AllMinionState.class)!= null)
+            {
+                hitMinion = true;
+            }
         if (hitEdge && !attackongoing)
             {
                 move(-EnemySpeed);
@@ -57,18 +66,23 @@ public class Scarlet extends Enemy
                 move(EnemySpeed);
                 setImage(imageR);
             }
-        if(this.getX()>(mget0.getX()-300) && this.getX()<(mget0.getX()+300)&& this.getY()<(mget0.getY()+90))
+        if(this.getX()>(mget0.getX()-300) && this.getX()<(mget0.getX()+300)&& this.getY()<(mget0.getY()+80))
         {
                 attackongoing=true;
                 attackminion();
         }
         else
             attackongoing=false;
+            
+        if( hitMinion == true){
+                minion.shrink(getWorld());
+                hit(1);
+            }
     }
     public void playsound()
     {
         
-        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
+        AllMinionState mget0 = (AllMinionState) getWorld().getObjects(AllMinionState.class).get(0);
         if(this.getX()>(mget0.getX()-300) && this.getX()<(mget0.getX()+300))
         {
             if(!playedonce)
@@ -104,7 +118,7 @@ public class Scarlet extends Enemy
     
     private void attackminion()
     {
-        Minion mget0 = (Minion) getWorld().getObjects(Minion.class).get(0);
+        AllMinionState mget0 = (AllMinionState) getWorld().getObjects(AllMinionState.class).get(0);
         if(!attackonce&&!intersectssomething())
         {
                         if(mget0.getX()>getX())
