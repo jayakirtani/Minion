@@ -15,4 +15,6 @@ comment5.text=\n\ When\ this\ method\ is\ called,\ the\ stability\ of\ the\ ghoo
 comment6.params=
 comment6.target=void\ switchImage()
 comment6.text=\n\ This\ will\ animate\ the\ ghoomba\ based\ on\ which\ image\ it\ has\ and\ whether\ or\ not\ the\ delay\ count\ has\ reached\ the\ change\ time.\n\ If\ the\ delay\ count\ has\ not\ reached\ the\ change\ time,\ the\ delay\ count\ will\ tick\ up.\n
-numComments=7
+comment7.params=
+comment7.target=void\ deathAnimation()
+numComments=8
