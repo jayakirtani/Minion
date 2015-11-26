@@ -1,4 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ execute()
-numComments=1
+comment0.target=ControlsCommand
+comment0.text=\n\ Interacts\ with\ Receiver\ of\ the\ command.\n\ \n\ @author\ Jaya\ \n\ @version\ 1.0\n
+comment1.params=
+comment1.target=void\ execute()
+numComments=2

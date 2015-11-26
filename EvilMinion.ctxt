@@ -1,11 +1,13 @@
 #BlueJ class context
-comment0.params=
-comment0.target=EvilMinion()
+comment0.target=EvilMinion
+comment0.text=\n\ Write\ a\ description\ of\ class\ EvilMinion\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\n\ Calls\ the\ necessary\ methods\ to\ move\ the\ ghoomba,\ animate\ it\ and\ decide\ whether\ or\ not\ it\ has\ been\ hit\n
+comment1.target=EvilMinion()
 comment2.params=
-comment2.target=void\ moveEnemy()
+comment2.target=void\ act()
+comment2.text=\n\ Calls\ the\ necessary\ methods\ to\ move\ the\ ghoomba,\ animate\ it\ and\ decide\ whether\ or\ not\ it\ has\ been\ hit\n
 comment3.params=
-comment3.target=void\ switchImage()
-numComments=4
+comment3.target=void\ moveEnemy()
+comment4.params=
+comment4.target=void\ switchImage()
+numComments=5

@@ -1,12 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=MyGameMenu()
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ MyGameMenu.\n\ \n
+comment0.target=MyGameMenu
+comment0.text=\n\ Write\ a\ description\ of\ class\ MyGameMenu\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=void\ prepare()
-comment1.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\n\ objects\ and\ add\ them\ to\ the\ world.\n
+comment1.target=MyGameMenu()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MyGameMenu.\n\ \n
 comment2.params=
-comment2.target=void\ act()
+comment2.target=void\ prepare()
+comment2.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\ That\ is\:\ create\ the\ initial\n\ objects\ and\ add\ them\ to\ the\ world.\n
 comment3.params=
-comment3.target=void\ stopped()
-numComments=4
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ stopped()
+numComments=5

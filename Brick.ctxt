@@ -1,12 +1,14 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Brick()
-comment0.text=\n\ Defines\ the\ image\ for\ the\ brick\n
+comment0.target=Brick
+comment0.text=\n\ Write\ a\ description\ of\ class\ Brick\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=void\ act()
+comment1.target=Brick()
+comment1.text=\n\ Defines\ the\ image\ for\ the\ brick\n
 comment2.params=
-comment2.target=void\ action()
-comment2.text=\n\ If\ the\ world\ is\ world\ four\ or\ five,\ the\ image\ will\ be\ changed\ to\ the\ bricks\ image.\n
+comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ act2()
-numComments=4
+comment3.target=void\ action()
+comment3.text=\n\ If\ the\ world\ is\ world\ four\ or\ five,\ the\ image\ will\ be\ changed\ to\ the\ bricks\ image.\n
+comment4.params=
+comment4.target=void\ act2()
+numComments=5
