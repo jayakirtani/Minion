@@ -8,11 +8,15 @@ import greenfoot.*;
  */
 public class MyGameMenu extends World
 {
-//     static GreenfootSound theme = new GreenfootSound("menutheme2.mp3");
+    static GreenfootSound theme = new GreenfootSound("menutheme2.wav");
+    StartGame startgame = new StartGame();
+    Controls controls = new Controls();
+    
     /**
      * Constructor for objects of class MyGameMenu.
      * 
      */
+    
     public MyGameMenu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -22,15 +26,14 @@ public class MyGameMenu extends World
         prepare();
     }
 
+    
     /**
      * Prepare the world for the start of the program. That is: create the initial
      * objects and add them to the world.
      */
     private void prepare()
-    {
-        StartGame startgame = new StartGame();
-        addObject(startgame, 223, 159);
-        Controls controls = new Controls();
+    {       
+        addObject(startgame, 223, 159);   
         addObject(controls, 235, 245);
         controls.setLocation(228, 238);
         controls.setLocation(223, 236);
@@ -41,32 +44,25 @@ public class MyGameMenu extends World
         startgame.setLocation(282, 295);
         controls.setLocation(300, 337);
     }
-//     
-//     public void act ()
-//     {
-//         if(theme.isPlaying() == false)
-//          {
-//              theme.playLoop();
-//          }
-//          
-//         if ( Greenfoot.mouseClicked(null))
-//         {
-//             theme.stop();
-//         }
-//         
-//     }
-// 
-//     
-//     public void started()
-//     {
-//          if(theme.isPlaying() == false)
-//          {
-//              theme.play();
-//          }
-//     }
-//     
-//     public void stopped()
-//     {
-//         theme.pause();
-//     }
+    
+    public void act ()
+    {
+        if(theme.isPlaying() == false)
+         {
+             theme.play();
+             theme.setVolume(40);
+         }
+         
+        if ( Greenfoot.mouseClicked(startgame) || Greenfoot.mouseClicked(controls) )
+        {
+            theme.stop();
+        }
+        
+    }
+
+        
+    public void stopped()
+    {
+        theme.pause();
+    }
 }

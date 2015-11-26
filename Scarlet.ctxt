@@ -1,16 +1,14 @@
 #BlueJ class context
-comment0.target=Scarlet
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Scarlet\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.params=
+comment0.target=Scarlet()
 comment1.params=
-comment1.target=Scarlet()
+comment1.target=void\ act()
 comment2.params=
-comment2.target=void\ act()
+comment2.target=void\ moveEnemy()
 comment3.params=
-comment3.target=void\ moveEnemy()
+comment3.target=void\ playsound()
 comment4.params=
-comment4.target=void\ playsound()
+comment4.target=boolean\ intersectssomething()
 comment5.params=
-comment5.target=boolean\ intersectssomething()
-comment6.params=
-comment6.target=void\ attackminion()
-numComments=7
+comment5.target=void\ attackminion()
+numComments=6

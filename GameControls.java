@@ -8,7 +8,8 @@ import greenfoot.*;
  */
 public class GameControls extends World
 {
-
+    GreenfootSound theme = new GreenfootSound("menutheme2.wav");
+    ReturnMenu returnmenu = new ReturnMenu();
     /**
      * Constructor for objects of class GameControls.
      * 
@@ -28,10 +29,31 @@ public class GameControls extends World
      */
     private void prepare()
     {
-        ReturnMenu returnmenu = new ReturnMenu();
+        
         addObject(returnmenu, 515, 380);
         returnmenu.setLocation(507, 372);
         returnmenu.setLocation(503, 371);
         returnmenu.setLocation(297, 374);
+    }
+    
+    public void act ()
+    {
+        if(theme.isPlaying() == false)
+         {
+             theme.play();
+             theme.setVolume(40);
+         }
+         
+        if ( Greenfoot.mouseClicked(returnmenu) )
+        {
+            theme.stop();
+        }
+        
+    }
+
+        
+    public void stopped()
+    {
+        theme.pause();
     }
 }
