@@ -29,17 +29,11 @@ public class GameControls extends World
      */
     private void prepare()
     {
-<<<<<<< HEAD
-        ReturnMenu returnmenu = new ReturnMenu();
-=======
         
->>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
         addObject(returnmenu, 515, 380);
         returnmenu.setLocation(507, 372);
         returnmenu.setLocation(503, 371);
         returnmenu.setLocation(297, 374);
-<<<<<<< HEAD
-=======
     }
     
     public void act ()
@@ -61,6 +55,5 @@ public class GameControls extends World
     public void stopped()
     {
         theme.pause();
->>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
     }
 }

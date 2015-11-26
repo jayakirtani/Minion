@@ -3,9 +3,5 @@ comment0.params=
 comment0.target=GreenEvilMinion()
 comment1.params=
 comment1.target=void\ act()
-<<<<<<< HEAD
-comment1.text=\r\n\ Calls\ the\ necessary\ methods\ to\ move\ the\ ghoomba,\ animate\ it\ and\ decide\ whether\ or\ not\ it\ has\ been\ hit\r\n
-=======
 comment1.text=\n\ Calls\ the\ necessary\ methods\ to\ move\ the\ ghoomba,\ animate\ it\ and\ decide\ whether\ or\ not\ it\ has\ been\ hit\n
->>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
 numComments=2

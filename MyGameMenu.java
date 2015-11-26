@@ -8,14 +8,10 @@ import greenfoot.*;
  */
 public class MyGameMenu extends World
 {
-<<<<<<< HEAD
-//     static GreenfootSound theme = new GreenfootSound("menutheme2.mp3");
-=======
     static GreenfootSound theme = new GreenfootSound("menutheme2.wav");
     StartGame startgame = new StartGame();
     Controls controls = new Controls();
     
->>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
     /**
      * Constructor for objects of class MyGameMenu.
      * 
@@ -47,8 +43,6 @@ public class MyGameMenu extends World
         controls.setLocation(300, 186);
         startgame.setLocation(282, 295);
         controls.setLocation(300, 337);
-<<<<<<< HEAD
-=======
     }
     
     public void act ()
@@ -70,34 +64,5 @@ public class MyGameMenu extends World
     public void stopped()
     {
         theme.pause();
->>>>>>> f12712c8997e3a80cf76e0f5662b68fb75989cf3
     }
-//     
-//     public void act ()
-//     {
-//         if(theme.isPlaying() == false)
-//          {
-//              theme.playLoop();
-//          }
-//          
-//         if ( Greenfoot.mouseClicked(null))
-//         {
-//             theme.stop();
-//         }
-//         
-//     }
-// 
-//     
-//     public void started()
-//     {
-//          if(theme.isPlaying() == false)
-//          {
-//              theme.play();
-//          }
-//     }
-//     
-//     public void stopped()
-//     {
-//         theme.pause();
-//     }
 }
